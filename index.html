@@ -15,8 +15,20 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <!-- <div class="loader">
+            <h2>Loading...</h2>
+            <img src="images/preloader.gif" alt="preloader">
+        </div> -->
+        <!-- <div class="load">
+            <hr/><hr/><hr/><hr/>//codepen
+          </div> -->
+          <div class="loader">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
+    </div>
     <!-- navbar section start from here -->
-    <nav>
+    <nav class="nav">
         <div class="container">
             <div class="nav-main">
                 <div class="logo">
@@ -24,10 +36,11 @@
                 </div>
                 <div class="menu">
                     <ul>
+                        <li><a href="#banner">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#service">Service</a></li>
+                        <li><a href="#team">Team</a></li>
                         <li><a href="#gallery">Work</a></li>
-                        <li><a href="#footer">Blog</a></li>
                         <li><a href="#footer">Contact</a></li>
                     </ul>
                 </div>
@@ -367,6 +380,9 @@
             </div>
         </div>
     </section>
+    <a href="#" class="back-to-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
     <!-- footer part goes here -->
     <footer id="footer">
         <div class="container">
@@ -466,7 +482,8 @@
             </div>
         </div>
     </footer>
-
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>

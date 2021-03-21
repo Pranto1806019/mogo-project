@@ -17,12 +17,22 @@ ul,li{
     margin: 0 auto;
 }
 /* navbar css part goes here */
-nav{
+.nav{
     position: fixed;
-    top : 0;
-    left : 0;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 999;
+    transition: all linear 0.4s;
+}
+.bg{
+    background-color: teal;
+    animation: bg 0.1s;
+    -webkit-animation: bg 1s;
+}
+@keyframes bg{
+    from{top: -70px};
+    to{top: 0px}
 }
 .nav-main{
     display: flex;
@@ -32,6 +42,10 @@ nav{
 }
 .logo img {
     padding-top: 29px;
+    transition: all linear 0.3s;
+}
+.bg .logo img {
+    padding-top: 15px;
 }
 .menu{
     width: 1000px;
@@ -69,6 +83,9 @@ nav{
 .menu ul li a:hover::after{
     opacity: 1;
     width: 100%;
+}
+.bg .menu ul li a{
+    line-height: 60px;
 }
 /* banner part goes here */
 
@@ -364,7 +381,6 @@ nav{
 /* team part css goes here */
 #team{
     padding-top: 100px;
-    padding-bottom: 92px;
 }
 .team-item{
     width: 380px;
@@ -431,6 +447,7 @@ nav{
 /* gallery part css goes here */
 #gallery{
     padding-bottom: 100px;
+    padding-top: 92px;
 }
 .gallery-main{
     display: flex;
@@ -644,3 +661,98 @@ footer{
 .copyright p span{
     color : #f38181;
 }
+
+
+/* back to top */
+.back-to-top{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index : 999999;
+    display: none;
+}
+.back-to-top i{
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999999999999;
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+/* .loader h2{
+    color : #fff;
+} */
+/* .load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%); */
+    /*change these sizes to fit into your project*/
+    /* width:100px;
+    height:100px;
+  }
+  .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+  
+  .load :first-child{background:#19A68C;animation-delay:-1.5s}
+  .load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+  .load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+  .load :last-child{background:#193B48}
+  
+  @keyframes spin{
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+
+  } */
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #c00;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  
